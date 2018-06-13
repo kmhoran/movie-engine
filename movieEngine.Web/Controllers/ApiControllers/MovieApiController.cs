@@ -1,32 +1,23 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
+using movieEngine.Movies.Data.Repositories;
 using System.Text.Encodings.Web;
 
-namespace movieEngine.Controllers.ApiControllers
+namespace movieEngine.Web.Controllers.ApiControllers
 {
     [Route("api/movies")]
     public class MoviesApiController: Controller
     {
         [HttpGet]
         public IActionResult GetAllMovies(){
-            var movie = new Movie(){
-                MovieId = 0,
-                Title = "Casablanca",
-                Year = 1942,
-            };
+            
             // string text = "text text";
+            var movieRepo = new MovieRepository();
+            var movies = movieRepo.GetMovies();
             
-            
-            
-            return Ok(movie);
+            return Ok(movies);
         }
         
     }
 
-    public class Movie{
-        public int MovieId { get; set; }     
-        public string Title { get; set; }    
-        public int Year { get; set; }
-        public IEnumerable<int> Numbers { get; set; }
-    }
+
 }
