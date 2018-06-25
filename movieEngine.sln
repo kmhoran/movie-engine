@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "movieEngine.Web", "movieEng
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "movieEngine.Movies", "movieEngine.Movies\movieEngine.Movies.csproj", "{F738BCE1-E0A7-4A9B-AD62-F6B8F56DD05B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "movieEngine.Tickets", "movieEngine.Tickets\movieEngine.Tickets.csproj", "{F5951BCD-D951-47DD-A268-392DD1040ED7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{F738BCE1-E0A7-4A9B-AD62-F6B8F56DD05B}.Release|x64.Build.0 = Release|Any CPU
 		{F738BCE1-E0A7-4A9B-AD62-F6B8F56DD05B}.Release|x86.ActiveCfg = Release|Any CPU
 		{F738BCE1-E0A7-4A9B-AD62-F6B8F56DD05B}.Release|x86.Build.0 = Release|Any CPU
+		{F5951BCD-D951-47DD-A268-392DD1040ED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5951BCD-D951-47DD-A268-392DD1040ED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5951BCD-D951-47DD-A268-392DD1040ED7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F5951BCD-D951-47DD-A268-392DD1040ED7}.Debug|x64.Build.0 = Debug|Any CPU
+		{F5951BCD-D951-47DD-A268-392DD1040ED7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F5951BCD-D951-47DD-A268-392DD1040ED7}.Debug|x86.Build.0 = Debug|Any CPU
+		{F5951BCD-D951-47DD-A268-392DD1040ED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5951BCD-D951-47DD-A268-392DD1040ED7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5951BCD-D951-47DD-A268-392DD1040ED7}.Release|x64.ActiveCfg = Release|Any CPU
+		{F5951BCD-D951-47DD-A268-392DD1040ED7}.Release|x64.Build.0 = Release|Any CPU
+		{F5951BCD-D951-47DD-A268-392DD1040ED7}.Release|x86.ActiveCfg = Release|Any CPU
+		{F5951BCD-D951-47DD-A268-392DD1040ED7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

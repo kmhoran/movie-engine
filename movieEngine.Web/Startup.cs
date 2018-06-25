@@ -9,7 +9,10 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using movieEngine.Movies.Contracts;
 using movieEngine.Movies.Data.Repositories;
+using movieEngine.Tickets.Contracts;
+using movieEngine.Tickets.Data;
 
 namespace movieEngine.Web
 {
@@ -26,6 +29,7 @@ namespace movieEngine.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IMovieRepository, InMemoryMovieRepository>();
+            services.AddSingleton<IShowingRepository, InMemoryShowingRepository>();
 
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -33,7 +37,6 @@ namespace movieEngine.Web
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             

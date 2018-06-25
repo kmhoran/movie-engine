@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using movieEngine.Movies.Contracts;
 using movieEngine.Movies.Data.Repositories;
 using System.Text.Encodings.Web;
 
@@ -17,8 +18,5 @@ namespace movieEngine.Web.Controllers.ApiControllers
         public IActionResult GetAllMovies(){
             return Ok(_movieRepo.GetMovies());
         }
-        
     }
-
-
 }

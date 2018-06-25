@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using movieEngine.Movies.Contracts;
 using movieEngine.Movies.Models;
 
 namespace movieEngine.Movies.Data.Repositories
@@ -36,6 +37,16 @@ namespace movieEngine.Movies.Data.Repositories
         }
         public IEnumerable<Movie> GetMovies(){
             return _movies;
+        }
+
+        public Movie Get(int movieId)
+        {
+            foreach(var movie in _movies){
+                if(movie.MovieId == movieId){
+                    return movie;
+                }
+            }
+            return null;
         }
     }
 }

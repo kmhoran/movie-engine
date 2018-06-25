@@ -1,0 +1,31 @@
+@model movieEngine.Web.Models.TicketsMovieViewModel;
+@{
+
+    ViewData["Title"]="Buy Tickets for " + Model.Movie.Title;
+}
+
+@section styles{
+    <style>
+        .body-text--padded{
+        margin: 5px 10px;
+    }
+    .movie-image{
+        width: 10em;
+    }
+    </style>
+}
+<div class="movie body-text--padded">
+<h1 class="">Tickets for @Model.Movie.Title</h1>
+<img class="movie-image"
+     src="@Model.Movie.ImagePath">
+</div>
+
+<hr/>
+<div class="row body-text--padded">
+@foreach(var showing in Model.Showings)
+{
+    <div>
+        <h3>@showing.StartTime.ToString() | Theater @showing.TheaterId</h3>
+    </div>
+}
+</div>

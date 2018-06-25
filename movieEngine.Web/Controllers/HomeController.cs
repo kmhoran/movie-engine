@@ -4,30 +4,28 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using movieEngine.Movies.Contracts;
 using movieEngine.Web.Models;
 
 namespace movieEngine.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private IMovieRepository _movieRepo;
+
+        public HomeController(IMovieRepository movieRepo)
+        {
+            _movieRepo = movieRepo;
+        }
         public IActionResult Index()
         {
-            return View();
+            var vm = new HomeIndexViewModel()
+            {
+                Movies = _movieRepo.GetMovies()
+            };
+            return View(vm);
         }
 
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
 
         public IActionResult Privacy()
         {

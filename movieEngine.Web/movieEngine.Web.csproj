@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\movieEngine.Movies\movieEngine.Movies.csproj" />
+    <ProjectReference Include="..\movieEngine.Tickets\movieEngine.Tickets.csproj" />
   </ItemGroup>
 
 </Project>

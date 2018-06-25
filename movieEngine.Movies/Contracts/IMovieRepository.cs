@@ -1,7 +1,10 @@
 using System.Collections.Generic;
 using movieEngine.Movies.Models;
 
-public interface IMovieRepository
-{
-    IEnumerable<Movie> GetMovies();
+namespace movieEngine.Movies.Contracts{
+    public interface IMovieRepository
+    {
+        IEnumerable<Movie> GetMovies();
+        Movie Get(int movieId);
+    }
 }
