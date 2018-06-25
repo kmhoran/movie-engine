@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections.Generic;
 
 namespace movieEngine.Movies.Models
@@ -20,5 +21,10 @@ public class Movie{
     public string Title { get; set; }    
     public int Year { get; set; }
     public string ImagePath { get; set; }
+    public string TicketUrl {
+            get {
+                return String.Concat("/tickets/movie/", this.MovieId.ToString());
+            }
+        }
 }
 }

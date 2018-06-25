@@ -12,6 +12,13 @@
     .movie-image{
         width: 10em;
     }
+    .showing{
+        border: 1px solid #555;
+        border-radius: 5px;
+        background-color: #efefef;
+        margin: 0.1em;
+        width: 23%;
+    }
     </style>
 }
 <div class="movie body-text--padded">
@@ -24,8 +31,10 @@
 <div class="row body-text--padded">
 @foreach(var showing in Model.Showings)
 {
-    <div>
+    <div class="col-md-3 showing">
+
         <h3>@showing.StartTime.ToString() | Theater @showing.TheaterId</h3>
+        <p>@showing.AvailableSeats seats left</p>
     </div>
 }
 </div>
